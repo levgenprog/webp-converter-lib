@@ -1,0 +1,23 @@
+{
+  "name": "webp-converter-lib",
+  "version": "1.0.0",
+  "main": "dist/lib.js",
+  "module": "dist/lib.js",
+  "types": "dist/lib.d.ts",
+  "scripts": {
+    "build": "node esbuild.config.js"
+  },
+  "files": [
+    "dist",
+    "src/webp_converter.wasm"
+  ],
+  "dependencies": {},
+  "keywords": ["webp-converter-lib"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "esbuild": "^0.21.5",
+    "typescript": "^5.5.2"
+  }
+}
