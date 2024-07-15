@@ -1,15 +1,16 @@
 {
   "name": "webp-converter-lib",
-  "version": "1.0.6",
+  "version": "1.0.13",
   "description": "A library for converting images to WebP using WASM",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "dist/index.js",
   "scripts": {
-    "build": "node esbuild.config.js"
+    "build": "node esbuild.config.js && cp src/webp_converter.wasm dist/ && cp src/webp_converter.js dist/"
   },
   "files": [
-    "dist"
+    "dist",
+    "src/webp_converter.wasm"
   ],
   "keywords": [
     "webp-converter-lib"

@@ -1,16 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "outDir": "dist",
-    "rootDir": "src",
+    "target": "es5",
+    "module": "esnext",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
-    "sourceMap": true
+    "outDir": "./dist",
+    "lib": ["esnext", "dom"],
+    "typeRoots": ["node_modules/@types", "./src/types"],
+    "baseUrl": "./",
+    "paths": {
+      "webp_converter": ["src/webp_converter.js"]
+    }
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }

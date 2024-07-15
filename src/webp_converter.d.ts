@@ -1,8 +1,9 @@
-declare class WEBPConverter {
-    constructor(input: Uint8Array, quality: number);
+declare module "webp_converter" {
+  export class WEBPConverter {
+    constructor(inputBytes: Uint8Array, outputQuality: number);
     convertImage(): Uint8Array;
   }
-  
-declare let Module: {
-  WEBPConverter: typeof WEBPConverter;
+
+  const wasmModule: (options?: { wasmBinary?: ArrayBuffer }) => Promise<WEBPConverter>;
+  export default wasmModule;
 }
